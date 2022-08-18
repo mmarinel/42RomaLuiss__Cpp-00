@@ -6,7 +6,7 @@
 /*   By: earendil <earendil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 14:32:58 by mmarinel          #+#    #+#             */
-/*   Updated: 2022/08/18 11:21:39 by earendil         ###   ########.fr       */
+/*   Updated: 2022/08/18 12:03:40 by earendil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,4 +62,29 @@ static std::string	get_cur_field(char const *field_name)
 		}
 	}
 	return (field_val);
+}
+
+std::string	Contact::get_name(void)
+{
+	return (std::string(this->name));
+}
+
+std::string	Contact::get_last_name(void)
+{
+	return (std::string(this->last_name));
+}
+
+std::string	Contact::get_nickname(void)
+{
+	return (std::string(this->nickname));
+}
+
+std::string	Contact::get_phone_number(void)
+{
+	return (std::string(this->phone_number));
+}
+
+std::string	Contact::get_darkest_secret(void)
+{
+	return (std::string(this->darkest_secret));
 }

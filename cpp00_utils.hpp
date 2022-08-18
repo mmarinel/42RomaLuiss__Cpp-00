@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   cpp00_utils.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: earendil <earendil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/17 11:54:22 by mmarinel          #+#    #+#             */
-/*   Updated: 2022/08/18 11:58:49 by earendil         ###   ########.fr       */
+/*   Created: 2022/08/18 12:47:35 by earendil          #+#    #+#             */
+/*   Updated: 2022/08/18 13:02:04 by earendil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_H
-#define CONTACT_H
+#ifndef CPP00_UTILS_H
+# define CPP00_UTILS_H
 
+#include <iostream>
 #include <string>
 
-class Contact
-{
-private:
-	std::string	name;
-	std::string	last_name;
-	std::string	nickname;
-	std::string	phone_number;
-	std::string	darkest_secret;
-public:
-				Contact(void);
-	void		update_contact(void);
-	std::string	get_name(void);
-	std::string	get_last_name(void);
-	std::string	get_nickname(void);
-	std::string	get_phone_number(void);
-	std::string	get_darkest_secret(void);
-};
+bool	str_is_alpha(const char *str);
+bool	str_is_digit(const char *str);
 
 #endif

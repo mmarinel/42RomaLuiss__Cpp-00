@@ -1,34 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   cpp00_utils.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: earendil <earendil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/17 15:52:52 by mmarinel          #+#    #+#             */
-/*   Updated: 2022/08/18 12:05:28 by earendil         ###   ########.fr       */
+/*   Created: 2022/08/18 12:49:57 by earendil          #+#    #+#             */
+/*   Updated: 2022/08/18 13:01:44 by earendil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
-#include <cstdlib>
-#include <string>
-#include <iostream>
+#include "cpp00_utils.hpp"
 
-int main(void)
+bool	str_is_alpha(const char *str)
 {
-	PhoneBook		phonebook;
-	std::string		command;
-
-	do
+	size_t	i;
+	
+	i = 0;
+	while (str[i])
 	{
-		command.erase(0);
-		while (command.empty() && false == std::cin.eof())
-		{
-			system("clear");
-			std::cout << "Enter command: ";
-			std::getline(std::cin, command, '\n');
-		}
-	} while (phonebook.interpreter(command));
-	return (0);
+		if (false == std::isalpha(str[i]))
+			return (false);
+		i++;
+	}
+	return (true);
+}
+
+bool	str_is_digit(const char *str)
+{
+	size_t	i;
+	
+	i = 0;
+	while (str[i])
+	{
+		if (false == std::isdigit(str[i]))
+			return (false);
+		i++;
+	}
+	return (true);
 }
