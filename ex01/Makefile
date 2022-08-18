@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mmarinel <mmarinel@student.42.fr>          +#+  +:+       +#+         #
+#    By: earendil <earendil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/16 17:34:54 by earendil          #+#    #+#              #
-#    Updated: 2022/08/17 11:22:50 by mmarinel         ###   ########.fr        #
+#    Updated: 2022/08/18 10:36:02 by earendil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ BOLDWHITE	:= "\033[1m\033[37m"
 CC:= @c++
 CFLAGS:= -std=c++98 -Wall -Werror -Wextra
 
-NAME := megaphone
+NAME := phone_book
 OBJS_DIR:= bin
 OBJS:= $(addprefix $(OBJS_DIR)/, $(shell find . -name "*.cpp" -print | sed 's/\.cpp/\.o/g' | sed 's/\.\///'))
 INCLUDES:= $(shell find . -name "*.hpp" -print)
