@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: earendil <earendil@student.42.fr>          +#+  +:+       +#+         #
+#    By: mmarinel <mmarinel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/16 17:34:54 by earendil          #+#    #+#              #
-#    Updated: 2022/08/18 15:17:21 by earendil         ###   ########.fr        #
+#    Updated: 2022/08/18 20:14:32 by mmarinel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,8 +44,6 @@ exercise: .BUILD
 
 run: .RUN
 	@echo $(CYAN) "\nTests running\n" $(RESET)
-	@./$(NAME) "shhhhh... I think the students are asleep..."
-	@./$(NAME) Damnit " ! " "Sorry students, I thought this thing was off."
 	@./$(NAME)
 
 all:
