@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: earendil <earendil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmarinel <mmarinel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 14:32:58 by mmarinel          #+#    #+#             */
-/*   Updated: 2022/08/18 15:12:07 by earendil         ###   ########.fr       */
+/*   Updated: 2022/08/18 19:07:55 by mmarinel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	Contact::update_contact(void)
 	{
 		this->phone_number = get_cur_field("phone_number");
 		if (false == this->phone_number.empty()
-			&& false == str_is_digit(this->phone_number.c_str()))
+			&& false == str_is_digit(this->phone_number))
 		{
 			std::cout << std::endl
 				<< "Please enter a digit string"
@@ -61,7 +61,7 @@ static std::string	get_cur_field(char const *field_name)
 	while (field_val.empty() && false == std::cin.eof())
 	{
 		system("clear");
-		std::cout << "Enter field " << "< " << field_name << " >" << ": ";
+		std::cout << "Enter field " << "< " << field_name << " >" << " : ";
 		std::getline(std::cin, field_val, '\n');
 		if (field_val.empty() && false == std::cin.eof())
 		{

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cpp00_utils.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: earendil <earendil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmarinel <mmarinel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 15:22:21 by earendil          #+#    #+#             */
-/*   Updated: 2022/08/18 15:23:18 by earendil         ###   ########.fr       */
+/*   Updated: 2022/08/18 19:00:09 by mmarinel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <string>
 
 //* utils
-bool	str_is_alpha(const char *str);
-bool	str_is_digit(const char *str);
+bool	str_is_alpha(std::string str);
+bool	str_is_digit(std::string str);
 
 #endif

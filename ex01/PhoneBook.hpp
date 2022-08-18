@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: earendil <earendil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmarinel <mmarinel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 11:47:56 by mmarinel          #+#    #+#             */
-/*   Updated: 2022/08/18 15:55:28 by earendil         ###   ########.fr       */
+/*   Updated: 2022/08/18 18:03:38 by mmarinel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include "cpp00_utils.hpp"
 # include <string>
 # include <cstdio>
+# include <cstdlib>
 # include <iostream>
 # include <iomanip>
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: earendil <earendil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmarinel <mmarinel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 14:46:10 by mmarinel          #+#    #+#             */
-/*   Updated: 2022/08/18 15:55:05 by earendil         ###   ########.fr       */
+/*   Updated: 2022/08/18 19:07:12 by mmarinel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,12 @@ bool PhoneBook::search_contact(void)
 		read_input(input);
 		if (input.empty())
 			break ;
-		else if (false == str_is_digit(input.c_str()))
+		else if (false == str_is_digit(input))
 			pb_bad_input("Please insert a number");
 		else
 		{
-			sscanf(input.c_str(), "%u", &next_index_to_display);
-			if (next_index_to_display > PHONEBOOK_MAX_CONTACTS
+			next_index_to_display = std::atoi(input.c_str());
+			if (next_index_to_display > PHONEBOOK_MAX_CONTACTS - 1
 				|| this->contacts[next_index_to_display].get_name().empty())
 				pb_bad_input("Input out of range");
 			else
