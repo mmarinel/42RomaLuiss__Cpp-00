@@ -6,7 +6,7 @@
 /*   By: mmarinel <mmarinel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 11:47:56 by mmarinel          #+#    #+#             */
-/*   Updated: 2022/08/18 18:03:38 by mmarinel         ###   ########.fr       */
+/*   Updated: 2022/08/18 20:06:01 by mmarinel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "Contact.hpp"
 # include "cpp00_utils.hpp"
+# include "../colors.hpp"
 # include <string>
 # include <cstdio>
 # include <cstdlib>

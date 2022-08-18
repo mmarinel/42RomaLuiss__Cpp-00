@@ -6,7 +6,7 @@
 /*   By: mmarinel <mmarinel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 14:32:58 by mmarinel          #+#    #+#             */
-/*   Updated: 2022/08/18 19:07:55 by mmarinel         ###   ########.fr       */
+/*   Updated: 2022/08/18 20:10:47 by mmarinel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	Contact::update_contact(void)
 			&& false == str_is_digit(this->phone_number))
 		{
 			std::cout << std::endl
-				<< "Please enter a digit string"
+				<< RED "Please enter a digit string" RESET
 				<< std::endl;
 			getchar();
 		}
@@ -47,7 +47,7 @@ void	Contact::update_contact(void)
 	this->darkest_secret = get_cur_field("darkest secret");
 	if (false == std::cin.eof())
 	{
-		std::cout << "<<SUCCESS>>" << std::endl;
+		std::cout << GREEN "<<SUCCESS>>" RESET << std::endl;
 		std::cout << "Press any Key to continue..." << std::endl;
 		getchar();
 		system("clear");
@@ -66,7 +66,7 @@ static std::string	get_cur_field(char const *field_name)
 		if (field_val.empty() && false == std::cin.eof())
 		{
 			std::cout << std::endl
-				<< "Empty field are not allowed!"
+				<< RED "Empty fields are not allowed!" RESET
 				<< std::endl;
 			getchar();
 		}

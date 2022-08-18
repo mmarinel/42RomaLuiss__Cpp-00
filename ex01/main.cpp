@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: earendil <earendil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmarinel <mmarinel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 15:52:52 by mmarinel          #+#    #+#             */
-/*   Updated: 2022/08/18 12:05:28 by earendil         ###   ########.fr       */
+/*   Updated: 2022/08/18 20:05:43 by mmarinel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+# include "../colors.hpp"
 #include <cstdlib>
 #include <string>
 #include <iostream>

@@ -6,7 +6,7 @@
 /*   By: mmarinel <mmarinel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 14:46:10 by mmarinel          #+#    #+#             */
-/*   Updated: 2022/08/18 19:07:12 by mmarinel         ###   ########.fr       */
+/*   Updated: 2022/08/18 20:12:27 by mmarinel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ bool PhoneBook::search_contact(void)
 	std::string		input;
 	unsigned int	next_index_to_display;
 
-	set_cout_flags();
 	while (false == std::cin.eof())
 	{
 		read_input(input);
