@@ -6,14 +6,18 @@
 /*   By: earendil <earendil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 11:54:22 by mmarinel          #+#    #+#             */
-/*   Updated: 2022/08/18 11:58:49 by earendil         ###   ########.fr       */
+/*   Updated: 2022/08/18 15:24:18 by earendil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_H
 #define CONTACT_H
 
-#include <string>
+# include "cpp00_utils.hpp"
+# include <cstdlib>
+# include <cstdio>
+# include <iostream>
+# include <string>
 
 class Contact
 {

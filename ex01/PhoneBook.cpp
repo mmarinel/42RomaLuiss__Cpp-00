@@ -6,22 +6,11 @@
 /*   By: earendil <earendil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 14:46:10 by mmarinel          #+#    #+#             */
-/*   Updated: 2022/08/18 13:30:49 by earendil         ###   ########.fr       */
+/*   Updated: 2022/08/18 15:55:05 by earendil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
-#include "../cpp00_utils.hpp"
-#include <cstdio>
-#include <iomanip>
-#include <iostream>
-#include <string>
-
-static void	display_contact(Contact contact);
-static void	set_cout_flags(void);
-static void	read_input(std::string& input_ref);
-static void	pb_bad_input(const char *msg);
-//* end of static declarations
 
 PhoneBook::PhoneBook(void)
 {
@@ -51,33 +40,14 @@ bool PhoneBook::search_contact(void)
 		else
 		{
 			sscanf(input.c_str(), "%u", &next_index_to_display);
-			if (next_index_to_display < 0 || next_index_to_display > PHONEBOOK_MAX_CONTACTS
+			if (next_index_to_display > PHONEBOOK_MAX_CONTACTS
 				|| this->contacts[next_index_to_display].get_name().empty())
 				pb_bad_input("Input out of range");
 			else
-				display_contact(this->get_contact(next_index_to_display));
+				display_contact(this->get_contact(next_index_to_display), input);
 		}
 	}
-}
-	
-static void	read_input(std::string& input_ref)
-{
-	system("clear");
-	std::cout << "Waiting for index: ";
-	getline(std::cin, input_ref, '\n');
-}
-
-static void	set_cout_flags(void)
-{
-	std::cout << std::setw(PHONEBOOK_MAX_WIDTH)
-		<< std::resetiosflags(std::ios::adjustfield)
-		<< std::setiosflags(std::ios::right);
-}
-
-static void	pb_bad_input(const char *msg)
-{
-	std::cout << msg << std::endl;
-	getchar();
+	return (true);
 }
 
 /**

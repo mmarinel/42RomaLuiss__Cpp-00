@@ -6,7 +6,7 @@
 /*   By: earendil <earendil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 11:47:56 by mmarinel          #+#    #+#             */
-/*   Updated: 2022/08/18 13:19:56 by earendil         ###   ########.fr       */
+/*   Updated: 2022/08/18 15:55:28 by earendil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,12 @@
 # define PHONEBOOK_H
 
 # include "Contact.hpp"
+# include "cpp00_utils.hpp"
 # include <string>
+# include <cstdio>
+# include <iostream>
+# include <iomanip>
+
 
 # ifndef PHONEBOOK_MAX_CONTACTS
 #  define PHONEBOOK_MAX_CONTACTS 8
@@ -38,5 +43,10 @@ public:
 	unsigned int	get_next_index(void);
 	void			set_next_index(unsigned int new_val);
 };
+
+void	display_contact(Contact contact, std::string next_index_to_display);
+void	set_cout_flags(void);
+void	read_input(std::string& input_ref);
+void	pb_bad_input(const char *msg);
 
 #endif
