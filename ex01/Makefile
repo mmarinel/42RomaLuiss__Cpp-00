@@ -6,7 +6,7 @@
 #    By: earendil <earendil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/16 17:34:54 by earendil          #+#    #+#              #
-#    Updated: 2022/08/18 10:36:02 by earendil         ###   ########.fr        #
+#    Updated: 2022/08/18 11:24:54 by earendil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ OBJS_DIR:= bin
 OBJS:= $(addprefix $(OBJS_DIR)/, $(shell find . -name "*.cpp" -print | sed 's/\.cpp/\.o/g' | sed 's/\.\///'))
 INCLUDES:= $(shell find . -name "*.hpp" -print)
 
-RMF:= @/bin/rm -f
+RMF:= @/bin/rm -rf
 MKD:= @mkdir -p
 MAKE_REC:= @make --no-print-directory
 
@@ -65,7 +65,7 @@ fclean: clean
 
 clean:
 	@printf "removing Object files $(OBJS)\n\033[0;37m"
-	$(RMF) $(OBJS)
+	$(RMF) $(OBJS_DIR)
 	@printf "\033[0;35mObject files removed!\n\n\033[0;37m"
 
 re: fclean all

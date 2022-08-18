@@ -6,7 +6,7 @@
 /*   By: earendil <earendil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 14:46:10 by mmarinel          #+#    #+#             */
-/*   Updated: 2022/08/18 11:11:33 by earendil         ###   ########.fr       */
+/*   Updated: 2022/08/18 11:19:20 by earendil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # include <iomanip>
 #include <iostream>
 #include <string>
-
-//* end of static declarations
 
 PhoneBook::PhoneBook(void)
 {

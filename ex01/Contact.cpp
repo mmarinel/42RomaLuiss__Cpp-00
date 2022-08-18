@@ -6,7 +6,7 @@
 /*   By: earendil <earendil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 14:32:58 by mmarinel          #+#    #+#             */
-/*   Updated: 2022/08/18 10:58:44 by earendil         ###   ########.fr       */
+/*   Updated: 2022/08/18 11:21:39 by earendil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,22 +48,17 @@ static std::string	get_cur_field(char const *field_name)
 {
 	std::string	field_val;
 
-	if (false == std::cin.eof())
+	while (field_val.empty() && false == std::cin.eof())
 	{
-		while (true)
+		system("clear");
+		std::cout << "Enter field " << "< " << field_name << " >" << ": ";
+		std::getline(std::cin, field_val, '\n');
+		if (field_val.empty() && false == std::cin.eof())
 		{
-			system("clear");
-			std::cout << "Enter field " << "< " << field_name << " >" << ": ";
-			std::getline(std::cin, field_val, '\n');
-			if (field_val.empty() && false == std::cin.eof())
-			{
-				std::cout << std::endl
-					<< "Empty field are not allowed!"
-					<< std::endl;
-				getchar();
-			}
-			else
-				break ;
+			std::cout << std::endl
+				<< "Empty field are not allowed!"
+				<< std::endl;
+			getchar();
 		}
 	}
 	return (field_val);
